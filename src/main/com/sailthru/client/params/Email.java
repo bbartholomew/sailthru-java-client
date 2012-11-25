@@ -22,6 +22,8 @@ public class Email extends AbstractApiParams implements ApiParams {
     protected String send;
     protected Map<String, Object> send_vars;
     protected Map<String, Object> vars;
+    
+    protected int simulate_time;
 
     public Email() {
         this.vars = new HashMap<String, Object>();
@@ -35,6 +37,11 @@ public class Email extends AbstractApiParams implements ApiParams {
         return this;
     }
 
+    public Email setSimulateTime(int simulateTime) {
+        this.simulate_time = simulateTime;
+        return this;
+    }
+    
     public Email setVerified(Integer verified) {
         this.verified = verified;
         return this;
