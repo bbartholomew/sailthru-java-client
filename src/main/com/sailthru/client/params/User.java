@@ -21,6 +21,7 @@ public class User extends AbstractApiParams implements ApiParams {
     protected Map<String, Integer> lists;
     protected String optout_email;
     protected Integer login;
+    protected Integer simulate_time;
     
     public User(String id) {
         this.id = id;
@@ -40,6 +41,11 @@ public class User extends AbstractApiParams implements ApiParams {
         return this;
     }
     
+    public User setSimulateTime(Integer simulateTime) {
+        this.simulate_time = simulateTime;
+        return this;
+    }
+
     public User setKeys(Map<String, String> keys) {
         this.keys = keys;
         return this;
