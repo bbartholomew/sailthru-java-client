@@ -16,6 +16,7 @@ public class Event extends AbstractApiParams implements ApiParams {
     protected String event;
     protected String schedule_time;
     protected Integer simulate_time;
+    protected String sim_id;
     
     public Event(String id) {
         this.id = id;
@@ -40,6 +41,11 @@ public class Event extends AbstractApiParams implements ApiParams {
         return this;
     }
     
+    public Event setSimId(String simId) {
+        this.sim_id = simId;
+        return this;
+    }
+
     public Event setVars(Map<String, Object> vars) {
         this.vars = vars;
         return this;

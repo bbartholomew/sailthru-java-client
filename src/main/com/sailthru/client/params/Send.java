@@ -21,6 +21,7 @@ public class Send extends AbstractApiParams implements ApiParams {
     protected Map<String, Object> vars;
     protected Object schedule_time;
     protected Integer simulate_time;
+    protected String sim_id;
     protected Map<String, Object> options;
     protected Map<String, Object> limit;
 
@@ -38,9 +39,13 @@ public class Send extends AbstractApiParams implements ApiParams {
         return this;
     }
 
-
     public Send setSimulateTime(Integer simulateTime) {
         this.simulate_time = simulateTime;
+        return this;
+    }
+
+    public Send setSimId(String simId) {
+        this.sim_id = simId;
         return this;
     }
 

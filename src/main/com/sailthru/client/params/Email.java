@@ -24,6 +24,7 @@ public class Email extends AbstractApiParams implements ApiParams {
     protected Map<String, Object> vars;
     
     protected Integer simulate_time;
+    protected String sim_id;
 
     public Email() {
         this.vars = new HashMap<String, Object>();
@@ -39,6 +40,11 @@ public class Email extends AbstractApiParams implements ApiParams {
 
     public Email setSimulateTime(Integer simulateTime) {
         this.simulate_time = simulateTime;
+        return this;
+    }
+    
+    public Email setSimId(String simId) {
+        this.sim_id = simId;
         return this;
     }
     

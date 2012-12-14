@@ -22,6 +22,7 @@ public class User extends AbstractApiParams implements ApiParams {
     protected String optout_email;
     protected Integer login;
     protected Integer simulate_time;
+    protected String sim_id;
     
     public User(String id) {
         this.id = id;
@@ -43,6 +44,11 @@ public class User extends AbstractApiParams implements ApiParams {
     
     public User setSimulateTime(Integer simulateTime) {
         this.simulate_time = simulateTime;
+        return this;
+    }
+
+    public User setSimId(String simId) {
+        this.sim_id = simId;
         return this;
     }
 
